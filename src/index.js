@@ -1,4 +1,5 @@
 import Card from './card.js';
 
-const x = new Card();
-x.print();
+let test = 'hello';
+
+export { Card, test };

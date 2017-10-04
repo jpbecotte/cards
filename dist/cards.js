@@ -1,3 +1,4 @@
+var Cards =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -57,7 +58,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
@@ -77,14 +78,21 @@ module.exports = __webpack_require__(1);
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.test = exports.Card = undefined;
+
 var _card = __webpack_require__(2);
 
 var _card2 = _interopRequireDefault(_card);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var x = new _card2.default();
-x.print();
+var test = 'hello';
+
+exports.Card = _card2.default;
+exports.test = test;
 
 /***/ }),
 /* 2 */
@@ -94,7 +102,7 @@ x.print();
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -102,18 +110,21 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Card = function () {
-    function Card(rank, suit) {
-        _classCallCheck(this, Card);
+  function Card(rank, suit) {
+    _classCallCheck(this, Card);
+
+    this.rank = rank;
+    this.suit = suit;
+  }
+
+  _createClass(Card, [{
+    key: "toString",
+    value: function toString() {
+      console.log(this.rank + this.suit);
     }
+  }]);
 
-    _createClass(Card, [{
-        key: "print",
-        value: function print() {
-            console.log("hello");
-        }
-    }]);
-
-    return Card;
+  return Card;
 }();
 
 exports.default = Card;

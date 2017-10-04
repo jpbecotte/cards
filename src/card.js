@@ -1,11 +1,12 @@
 class Card {
-    constructor(rank, suit) {
+  constructor(rank, suit) {
+    this.rank = rank;
+    this.suit = suit;
+  }
 
-    }
-
-    print(){
-        console.log("hello");
-    }
+  toString() {
+    console.log(this.rank + this.suit);
+  }
 }
 
 export default Card;
