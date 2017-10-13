@@ -1,3 +1,15 @@
 export default {
-  names: ['spade', 'heart', 'diamond', 'club'],
+  spade: {
+    picto: '♠',
+  },
+  heart: {
+    picto: '♥',
+  },
+  diamond: {
+    picto: '♦',
+  },
+  club: {
+    picto: '♣',
+  },
+  all: ['spade', 'heart', 'diamond', 'club'],
 };

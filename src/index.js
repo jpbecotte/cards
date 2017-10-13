@@ -1,5 +1,4 @@
-import Card from './card.js';
+import Deck from './deck.js';
+import Hand from './hand.js';
 
-let test = 'hello';
-
-export { Card, test };
+export { Deck, Hand };

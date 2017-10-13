@@ -6,10 +6,20 @@
     <script src="../dist/cards.js"></script>
 </head>
 <body>
-    A complete deck: <span id="result"></span>
+    A complete deck: <span id="result"></span> <br>
+    A picked card: <span id="picked"></span> <br>
+    A hand: <span id="hand0"></span> <br>
+    Another hand: <span id="hand1"></span> <br>
+    Another hand: <span id="hand2"></span> <br>
+    Another hand: <span id="hand3"></span> <br>
 </body>
 <script>
-  
-  document.getElementById('result').innerHTML = 'Hello';
+  let deck = new Cards.Deck();
+  document.getElementById('result').innerHTML = deck.toString();
+
+  for (var i =0; i<4; i++) {
+    let hand = Cards.Hand.fromDeck(deck);
+    document.getElementById('hand'+i).innerHTML = hand.toString();
+  }
 </script>
 </html>
