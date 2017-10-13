@@ -17,7 +17,7 @@ class Hand {
 
   static fromDeck(deck) {
     const hand = new Hand();
-    for (var i = 0; i < 13; i++) {
+    for (let i = 0; i < 13; i++) {
       hand.add(deck.pick());
     }
     return hand;
