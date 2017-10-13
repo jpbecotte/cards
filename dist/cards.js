@@ -255,6 +255,8 @@ var _suits2 = _interopRequireDefault(_suits);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Hand = function () {
@@ -277,6 +279,13 @@ var Hand = function () {
         if (a.rank < b.rank) return -1;
         if (a.rank > b.rank) return 1;else return 0;
       });
+    }
+  }, {
+    key: 'allCards',
+    value: function allCards() {
+      return Object.values(this.suits).reduce(function (acc, arr) {
+        return [].concat(_toConsumableArray(acc), _toConsumableArray(arr));
+      }, []);
     }
   }, {
     key: 'toString',

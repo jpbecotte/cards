@@ -15,6 +15,10 @@ class Hand {
     })
   }
 
+  allCards() {
+    return Object.values(this.suits).reduce((acc, arr) => [...acc, ...arr], [])
+  }
+
   static fromDeck(deck) {
     const hand = new this();
     for (let i = 0; i < 13; i++) {
