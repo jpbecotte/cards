@@ -292,7 +292,7 @@ var Hand = function () {
   }], [{
     key: 'fromDeck',
     value: function fromDeck(deck) {
-      var hand = new Hand();
+      var hand = new this();
       for (var i = 0; i < 13; i++) {
         hand.add(deck.pick());
       }
